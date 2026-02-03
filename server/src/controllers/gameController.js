@@ -63,14 +63,14 @@ export const createGame = async (req, res) => {
   try {
     const { title, description, dateReleased, genre } = req.body;
 
-    if (
-      title !== "" ||
-      description !== "" ||
-      dateReleased !== "" ||
-      genre !== ""
-    ) {
-      return res.status(400).json({ message: "some fields empty" });
-    }
+    // if (
+    //   title !== "" ||
+    //   description !== "" ||
+    //   dateReleased !== "" ||
+    //   genre !== ""
+    // ) {
+    //   return res.status(400).json({ message: "some fields empty" });
+    // }
 
     const game = Game.create({ title, description, dateReleased, genre });
 
